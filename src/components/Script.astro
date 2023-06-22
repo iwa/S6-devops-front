@@ -1,0 +1,8 @@
+<script is:inline>
+    document.getElementById('button').addEventListener('click', async () => {
+        const res = await fetch('https://devops-api.iwa.sh/api/date');
+        const data = await res.json();
+        const date = data.date;
+        document.getElementById('result').innerText = JSON.stringify(date);
+    });
+</script>
